@@ -129,18 +129,18 @@
                         else
                             upgradePrices["b1"] = upgradePrices["b1"] * 2;
                         KneckPerClick += 1;
-                        document.getElementById("kneckPerClickDis").innerHTML = "Kn&auml;ck p&auml;r click: " + KneckPerClick;
+                        document.getElementById("kneckPerClickDis").innerHTML = "Kn&auml;ck per click: " + KneckPerClick;
                         document.getElementById("kneckAntal").innerHTML = "Du har " + antalKneck + " Kn&auml;cke";
                         document.getElementById("b1").innerHTML = upgradePrices["b1"];
                     };
-                };
+                }
                 else {
                     if (antalKneck >= upgradePrices[buttonId]) {
                         antalKneck -= upgradePrices[buttonId];
                         upgradePrices[buttonId] += upgradePrices["b1"]; //Change later
                         productionBuilds[buttonId] += 1;
                         
-                        document.getElementById(buttonId + "t").innerHTML = "Kn&auml;ck p&auml;r sec: " + productionBuilds[buttonId] * productionGains[buttonId];
+                        document.getElementById(buttonId + "t").innerHTML = "Kn&auml;ck per sec: " + productionBuilds[buttonId] * productionGains[buttonId];
                         document.getElementById("kneckAntal").innerHTML = "Du har " + antalKneck + " Kn&auml;cke";
                         document.getElementById(buttonId).innerHTML = upgradePrices[buttonId];
                     };
